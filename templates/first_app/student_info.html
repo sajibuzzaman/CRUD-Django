@@ -1,0 +1,13 @@
+{% extends 'first_app/base.html' %}
+
+
+{% block content %}
+    <h1>Student Information</h1>
+    <h3>First Name: {{ info.first_name }}</h3>
+    <h3>Last Name: {{ info.last_name }}</h3>
+    <h3>Email: {{ info.email }}</h3>
+    <h3>Phone: {{ info.phone }}</h3>
+    <a class="btn btn-primary" href="{% url 'update' student_id=info.id %}">Update</a>
+    <a class="btn btn-primary" href="{% url 'delete' student_id=info.id %}">Delete</a>
+{% endblock content %}
+    
